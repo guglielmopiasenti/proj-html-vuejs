@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <img src="../assets/img/logotype-2-139x23.png" alt="">
+    <img src="../assets/img/logotype.png" alt="">
     <div>
         <ul>
             <li v-for="(navItem, index) in navLinks" :key="index">
