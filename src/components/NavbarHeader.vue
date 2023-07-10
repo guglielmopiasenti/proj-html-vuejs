@@ -11,14 +11,16 @@ export default {
 </script>
 
 <template>
-    <img src="../assets/img/logotype.png" alt="">
-    <div>
-        <ul>
-            <li v-for="(navItem, index) in navLinks" :key="index">
-                {{ navItem.link }}
-            </li>
-        </ul>
-    </div>
+    <nav>
+        <img src="../assets/img/logotype.png" alt="">
+        <div>
+            <ul>
+                <li v-for="(navItem, index) in navLinks" :key="index">
+                    {{ navItem.link }}
+                </li>
+            </ul>
+        </div>
+    </nav>
 </template>
 
 <style lang="scss"></style>
