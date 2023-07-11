@@ -12,4 +12,18 @@ export default {
         <p>{{ text }}</p>
     </div>
 </template>
-<script></script>
+<style lang="scss" scoped>
+@use '../assets/scss/var' as *;
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: right auto;
+    width: 80%;
+    padding: 50px 50px;
+    background-color: $c-a;
+
+
+}
+</style>
