@@ -15,6 +15,12 @@ export default {
 
 <style lang="scss" scoped>
 #jumbotron {
-    position: relative;
+    padding: 200px 0;
+    width: 50%;
+    color: white;
+}
+
+h1 {
+    font-size: 100px;
 }
 </style>

@@ -24,10 +24,14 @@ export default {
 #header {
     background-color: $c-g3;
     background-image: url(../assets/img/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg);
+    background-position: 120% 0%, right;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+    background-size: 80%;
 }
 
 .container {
-    width: 1200px;
+    width: 1300px;
     margin: 0 auto;
 }
 </style>
