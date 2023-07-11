@@ -15,14 +15,15 @@ export default {
 
 <template>
     <section id="presentation">
-        <h2>OUR CONSULTANTS CAN HELP YOU</h2>
-        <PresentationCard />
+        <PresentationCard title="OUR CONSULTANTS CAN HELP YOU" />
     </section>
     <section id="about-us">
-        <AboutUs />
+        <AboutUs title="WE MAKE YOUR STRATEGY WORK"
+            text="When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed when I hear the buzz of the little world among the stalks,and grow familiar indescribable forms of the insects .and flies, then I feel the presence of the Almighty . " />
     </section>
     <section id="a-card">
-        <AquaCard />
+        <AquaCard title="WE HELP TO DELIVER THE BUSINESS CASE" text="When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of
+            my trees, and but a thousand unknown" />
     </section>
     <section id="project">
         <ProjectCard />
