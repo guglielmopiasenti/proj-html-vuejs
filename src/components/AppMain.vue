@@ -2,11 +2,13 @@
 
 import PresentationCard from './PresentationCard.vue';
 import AboutUs from './AboutUs.vue';
+import AquaCard from './AquaCard.vue';
 import ProjectCard from './ProjectCard.vue';
 import TestimonialCard from './TestimonialCard.vue';
 import BlogCard from './BlogCard.vue';
+import GetStartedCard from './GetStartedCard.vue';
 export default {
-    components: { PresentationCard, AboutUs, ProjectCard, TestimonialCard, BlogCard }
+    components: { PresentationCard, AboutUs, ProjectCard, TestimonialCard, BlogCard, GetStartedCard, AquaCard }
 }
 
 </script>
@@ -20,7 +22,7 @@ export default {
         <AboutUs />
     </section>
     <section id="a-card">
-
+        <AquaCard />
     </section>
     <section id="project">
         <ProjectCard />
@@ -31,7 +33,9 @@ export default {
     <section id="blog">
         <BlogCard />
     </section>
-    <section id="get-started"></section>
+    <section id="get-started">
+        <GetStartedCard />
+    </section>
 </template>
 
 <style></style>
