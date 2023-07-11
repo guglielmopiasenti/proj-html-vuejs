@@ -4,8 +4,9 @@ import PresentationCard from './PresentationCard.vue';
 import AboutUs from './AboutUs.vue';
 import ProjectCard from './ProjectCard.vue';
 import TestimonialCard from './TestimonialCard.vue';
+import BlogCard from './BlogCard.vue';
 export default {
-    components: { PresentationCard, AboutUs, ProjectCard, TestimonialCard }
+    components: { PresentationCard, AboutUs, ProjectCard, TestimonialCard, BlogCard }
 }
 
 </script>
@@ -27,7 +28,9 @@ export default {
     <section id="testimonial">
         <TestimonialCard />
     </section>
-    <section id="blog"></section>
+    <section id="blog">
+        <BlogCard />
+    </section>
     <section id="get-started"></section>
 </template>
 
