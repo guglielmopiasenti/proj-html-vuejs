@@ -29,7 +29,7 @@ export default {
 
 h1 {
     @include container-md;
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 30px;
 }
 
@@ -59,7 +59,7 @@ h1 {
     display: flex;
     width: calc(100% / 2);
     align-items: flex-start;
-    padding: 30px 100px;
+    padding: 80px 100px;
 }
 
 .card-description {
