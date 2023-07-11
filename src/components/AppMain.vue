@@ -2,8 +2,10 @@
 
 import PresentationCard from './PresentationCard.vue';
 import AboutUs from './AboutUs.vue';
+import ProjectCard from './ProjectCard.vue';
+import TestimonialCard from './TestimonialCard.vue';
 export default {
-    components: { PresentationCard, AboutUs }
+    components: { PresentationCard, AboutUs, ProjectCard, TestimonialCard }
 }
 
 </script>
@@ -19,8 +21,12 @@ export default {
     <section id="a-card">
 
     </section>
-    <section id="project"></section>
-    <section id="testimonial"></section>
+    <section id="project">
+        <ProjectCard />
+    </section>
+    <section id="testimonial">
+        <TestimonialCard />
+    </section>
     <section id="blog"></section>
     <section id="get-started"></section>
 </template>
