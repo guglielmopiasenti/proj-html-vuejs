@@ -32,7 +32,7 @@ export default {
         <TestimonialCard title="WHAT'S THE CUSTOMER SAY ABOUT OUR WORK" />
     </section>
     <section id="blog">
-        <BlogCard />
+        <BlogCard title="THE RECENT NEWS YOU MUST READ IT" />
     </section>
     <section id="get-started">
         <GetStartedCard title="LET'S TALK ABOUT WORK"
