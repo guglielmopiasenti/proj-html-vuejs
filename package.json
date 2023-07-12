@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/bai-jamjuree": "^5.0.5",
+    "@fontsource/open-sans": "^5.0.5",
+    "@fontsource/raleway": "^5.0.5",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "vue": "^3.3.4"
