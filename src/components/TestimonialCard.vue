@@ -2,6 +2,9 @@
 import { TestimonialCard } from '../assets/data/data';
 
 export default {
+    props: {
+        title: String
+    },
     data() {
         return {
             testimonialCard: TestimonialCard,
@@ -10,30 +13,76 @@ export default {
 };
 </script>
 <template>
-    <div class="card-container">
-        <div v-for="(card, index) in testimonialCard" :key="index" class="testimonial-card">
-            <div class="testimonial-content">
-                <p>{{ card.text }}</p>
-                <p>{{ card.author }}</p>
-                <p>{{ card.company }}</p>
+    <div class="container">
+        <div class="testimonial">TESTIMONIAL</div>
+        <h1>{{ title }}</h1>
+        <div class="card-container">
+            <div v-for="(card, index) in testimonialCard" :key="index" class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>{{ card.text }}</p>
+                    <h2>{{ card.author }}</h2>
+                    <p>{{ card.company }}</p>
+                </div>
+                <div class="testimonial-img" :style="{ backgroundImage: `url(${card.img})` }"></div>
             </div>
-            <div class="testimonial-img" :style="{ backgroundImage: `url(${card.img})` }"></div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 @use '../assets/scss/var' as *;
+@use '../assets//scss/mixins' as *;
+
+.container {
+    .testimonial {
+        position: relative;
+        color: white;
+        text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 68%;
+            right: 35px;
+            width: 70px;
+            height: 3px;
+            background-color: $c-a;
+            transform: translateY(-50%);
+        }
+    }
+
+    h1 {
+        @include second-font;
+        color: white;
+        font-size: 40px;
+        width: 40%;
+        text-align: right;
+        padding: 50px 0;
+        translate: 145%;
+    }
+
+    h2 {
+        @include second-font;
+        padding: 40px 0;
+    }
+
+    p {
+        letter-spacing: 1px;
+        line-height: 25px;
+        color: gray;
+    }
+}
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    padding-bottom: 200px;
 
     .testimonial-card {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 450px;
+        height: 450px;
         background-color: white;
         overflow: hidden;
 
@@ -53,12 +102,20 @@ export default {
             .testimonial-img {
                 opacity: 1;
             }
+
+            h2 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
         }
 
         .testimonial-content {
             position: relative;
             z-index: 2;
-            padding: 20px;
+            padding: 60px;
         }
     }
 }
