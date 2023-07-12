@@ -15,13 +15,16 @@ export default {
 <template>
     <div class="background">
         <div class="section-container">
-            <div>
+            <div class="project-container">
                 <div>
                     <div id="project">
                         PROJECT
                     </div>
                     <h1>{{ title }}</h1>
-                    <div></div>
+                </div>
+                <div class="buttons">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
             <div class="card-components">
@@ -45,6 +48,27 @@ export default {
 
 .background {
     background-color: $c-g3;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+
+    i {
+        padding: 15px;
+        background-color: #36354B;
+
+        &:hover {
+            background-color: $c-a;
+            transition: background-color 1s ease;
+        }
+    }
 }
 
 .section-container {
