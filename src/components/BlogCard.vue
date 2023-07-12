@@ -1,9 +1,14 @@
 <script>
+import Btn from '../components/AppButton.vue';
 import { BlogCard } from '../assets/data/data';
 
 export default {
+    components: {
+        'btn': Btn
+    },
     props: {
-        title: String
+        title: String,
+        button: String,
     },
     data() {
         return {
@@ -14,9 +19,13 @@ export default {
 </script>
 <template>
     <div class="container">
-        <div class="blog">BLOG</div>
-        <h1>{{ title }}</h1>
-
+        <div>
+            <div class="blog">BLOG</div>
+            <h1>{{ title }}</h1>
+        </div>
+        <div>
+            <btn :button=button />
+        </div>
     </div>
     <div class="blog-container">
         <div v-for="(card, index) in blogCard" :key="index" class="blog-card">
@@ -39,6 +48,9 @@ export default {
 
 .container {
     @include container-lg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .blog {
@@ -82,6 +94,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .blog-card {

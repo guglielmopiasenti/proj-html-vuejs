@@ -1,15 +1,28 @@
 <script>
+import Btn from '../components/AppButton.vue';
 export default {
-
+    components: {
+        'btn': Btn
+    },
+    props: {
+        button: String
+    }
 }
 
 </script>
 
 <template>
     <section id="jumbotron">
-        <div>ALWAYS THE BEST WAY YOU NEED IT</div>
+        <p>ALWAYS THE BEST WAY YOU NEED IT</p>
         <h1>THE BEST BUSINESS CONSULTING</h1>
-        <a href="#" class="btn btn-a">READ MORE</a>
+        <div>
+            <btn style="margin-right: 30px;" :button=button />
+            <span class="fa-stack fa-2x">
+                <i class="fa-regular fa-circle fa-stack-2x"></i>
+                <i class="fa-sharp fa-solid fa-play fa-stack-1x"></i>
+            </span>
+        </div>
+
     </section>
 </template>
 
@@ -17,13 +30,14 @@ export default {
 @use '../assets/scss/mixins' as *;
 @use '../assets/scss/var' as *;
 
+
 #jumbotron {
     padding: 250px 0;
     width: 50%;
     color: white;
 }
 
-div {
+p {
     position: relative;
     font-size: 15px;
     font-weight: 300;
@@ -47,5 +61,10 @@ h1 {
     font-size: 100px;
     line-height: 90px;
     font-weight: 700;
+    padding-bottom: 50px;
+}
+
+.fa-play {
+    color: $c-a;
 }
 </style>

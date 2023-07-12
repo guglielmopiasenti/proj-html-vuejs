@@ -13,7 +13,7 @@ export default {
     <section id="header">
         <div class="container">
             <NavbarHeader />
-            <JumbotronHeader />
+            <JumbotronHeader button="READ MORE" />
         </div>
     </section>
 </template>

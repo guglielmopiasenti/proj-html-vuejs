@@ -23,7 +23,7 @@ export default {
     </section>
     <section id="a-card">
         <AquaCard title="WE HELP TO DELIVER THE BUSINESS CASE" text="When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of
-            my trees, and but a thousand unknown" />
+            my trees, and but a thousand unknown" button="GET STARTED" />
     </section>
     <section id="project">
         <ProjectCard title="OUR EXPERT TRUSTED CONSULTANTS HELP CLIENTS" />
@@ -32,11 +32,11 @@ export default {
         <TestimonialCard title="WHAT'S THE CUSTOMER SAY ABOUT OUR WORK" />
     </section>
     <section id="blog">
-        <BlogCard title="THE RECENT NEWS YOU MUST READ IT" />
+        <BlogCard title="THE RECENT NEWS YOU MUST READ IT" button="VIEW ALL" />
     </section>
     <section id="get-started">
         <GetStartedCard title="LET'S TALK ABOUT WORK"
-            par="A wonderful serenity has taken possession Far far away, behind the word mountains." />
+            par="A wonderful serenity has taken possession Far far away, behind the word mountains." button="GET STARTED" />
     </section>
 </template>
 
