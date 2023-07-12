@@ -35,8 +35,21 @@ export default {
 
 h1 {
     @include container-md;
+    @include second-font;
+    position: relative;
     padding-top: 80px;
     padding-bottom: 30px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 68%;
+        right: -16%;
+        width: 70%;
+        height: 3px;
+        background-color: $c-a;
+        transform: translateY(-50%);
+    }
 }
 
 .card {
@@ -48,7 +61,9 @@ h1 {
     width: calc(180% / 2);
     padding-bottom: 50px;
 
-
+    h3 {
+        @include second-font;
+    }
 
     img {
         background-color: $c-r;
