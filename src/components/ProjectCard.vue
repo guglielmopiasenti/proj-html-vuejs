@@ -97,7 +97,7 @@ export default {
         position: relative;
 
         img {
-            width: 400px;
+            width: 420px;
             transition: all .3s ease-in-out;
         }
 
