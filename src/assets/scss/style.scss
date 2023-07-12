@@ -1,4 +1,5 @@
 @use './var' as *;
+@use './mixins' as *;
 
 // CSS RESET
 
@@ -16,4 +17,10 @@ body {
 }
 a {
     text-decoration: none !important;
+}
+h2 {
+ @include second-font;
+}
+h1 {
+    @include second-font;
 }
