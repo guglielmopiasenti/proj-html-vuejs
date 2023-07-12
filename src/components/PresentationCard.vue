@@ -12,13 +12,15 @@ export default {
 }
 </script>
 <template>
-    <h1>{{ title }}</h1>
-    <div class="card">
-        <div class="card-container" v-for="(card, index) in presCard" :key="index">
-            <img :src="card.img" alt="Card Image" />
-            <div class="card-description">
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.text }}</p>
+    <div class="background">
+        <h1>{{ title }}</h1>
+        <div class="card">
+            <div class="card-container" v-for="(card, index) in presCard" :key="index">
+                <img :src="card.img" alt="Card Image" />
+                <div class="card-description">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.text }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -26,6 +28,10 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/var' as *;
 @use '../assets/scss/_mixins' as *;
+
+.background {
+    background-color: white;
+}
 
 h1 {
     @include container-md;
