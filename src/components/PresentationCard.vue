@@ -73,6 +73,8 @@ h1 {
 
     p {
         padding-top: 10px;
+        font-weight: 200;
+        letter-spacing: 1px;
     }
 }
 
