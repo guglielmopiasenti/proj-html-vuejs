@@ -24,7 +24,11 @@ export default {
      color: white;
 
      h1 {
-         font-size: 30px;
+         font-size: 50px;
+     }
+
+     p {
+         letter-spacing: 1px;
      }
  }
 </style> 
