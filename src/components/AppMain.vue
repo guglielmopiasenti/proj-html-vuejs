@@ -29,7 +29,7 @@ export default {
         <ProjectCard title="OUR EXPERT TRUSTED CONSULTANTS HELP CLIENTS" />
     </section>
     <section id="testimonial">
-        <TestimonialCard />
+        <TestimonialCard title="WHAT'S THE CUSTOMER SAY ABOUT OUR WORK" />
     </section>
     <section id="blog">
         <BlogCard />
