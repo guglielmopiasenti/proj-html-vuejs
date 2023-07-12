@@ -63,6 +63,7 @@
 
                 &:hover {
                     color: $c-r;
+                    transition: color 0.5s ease;
                 }
             }
 
