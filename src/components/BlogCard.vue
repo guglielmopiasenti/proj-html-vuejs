@@ -2,6 +2,9 @@
 import { BlogCard } from '../assets/data/data';
 
 export default {
+    props: {
+        title: String
+    },
     data() {
         return {
             blogCard: BlogCard,
@@ -10,20 +13,70 @@ export default {
 };
 </script>
 <template>
+    <div class="container">
+        <div class="blog">BLOG</div>
+        <h1>{{ title }}</h1>
+
+    </div>
     <div class="blog-container">
         <div v-for="(card, index) in blogCard" :key="index" class="blog-card">
             <div class="blog-img" :style="{ backgroundImage: `url(${card.img})` }"></div>
             <div class="blog-content">
-                <p>{{ card.date }}</p>
-                <p>{{ card.author }}</p>
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.text }}</p>
+                <div class="info">
+                    <p>{{ card.date }}</p>
+                    <p>{{ card.author }}</p>
+                </div>
+                <h2>{{ card.title }}</h2>
+                <p class="text">{{ card.text }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
+@use '../assets/scss/mixins' as *;
+@use '../assets/scss/var' as *;
+
+.container {
+    @include container-lg;
+}
+
+.blog {
+    color: white;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 20px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background-color: $c-a;
+        transform: translateY(-50%);
+    }
+}
+
+h1 {
+    @include second-font;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 50px;
+}
+
+h2 {
+    padding: 20px 0;
+}
+
+.text {
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: grey;
+}
+
 .blog-container {
     display: flex;
     flex-wrap: wrap;
@@ -33,8 +86,8 @@ export default {
 
 .blog-card {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 650px;
+    height: 450px;
     margin: 10px;
 
     .blog-img {
@@ -49,11 +102,17 @@ export default {
         bottom: -25%;
         right: 0%;
         width: 80%;
-        height: 50%;
+        height: 60%;
         background-color: white;
-        padding: 10px;
+        padding: 30px;
         box-sizing: border-box;
         overflow: auto;
+
+        .info {
+            display: flex;
+            gap: 20px;
+            color: $c-r;
+        }
     }
 }
 </style>
