@@ -35,7 +35,8 @@ export default {
         <BlogCard />
     </section>
     <section id="get-started">
-        <GetStartedCard />
+        <GetStartedCard title="LET'S TALK ABOUT WORK"
+            par="A wonderful serenity has taken possession Far far away, behind the word mountains." />
     </section>
 </template>
 
