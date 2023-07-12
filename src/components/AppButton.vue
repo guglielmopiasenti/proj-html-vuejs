@@ -28,6 +28,7 @@ export default {
     padding: 20px 35px;
     font-size: 16px;
     transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
 
     &:hover {
         color: white;
