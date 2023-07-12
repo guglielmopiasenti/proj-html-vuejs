@@ -26,7 +26,7 @@ export default {
             my trees, and but a thousand unknown" />
     </section>
     <section id="project">
-        <ProjectCard />
+        <ProjectCard title="OUR EXPERT TRUSTED CONSULTANTS HELP CLIENTS" />
     </section>
     <section id="testimonial">
         <TestimonialCard />
