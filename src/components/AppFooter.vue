@@ -31,6 +31,7 @@
 </template>
 
 <style scoped lang="scss">
+@use '../assets/scss/var' as *;
 @use '../assets/scss/mixins' as *;
 
 .footer {
@@ -57,7 +58,16 @@
 
         li {
             margin: 0 10px;
+
+            a {
+
+                &:hover {
+                    color: $c-r;
+                }
+            }
+
         }
+
     }
 
     .divider {
