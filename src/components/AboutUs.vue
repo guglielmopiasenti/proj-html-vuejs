@@ -11,7 +11,7 @@ export default {
     <div class="card-container">
         <img src="../assets/img/business-people-working-together-on-project-and-5FHSKBL.jpg" alt="">
         <div class="card-description">
-            <div>ABOUT US</div>
+            <div id="about">ABOUT US</div>
             <h1>{{ title }}</h1>
             <p> {{ text }}
             </p>
@@ -34,12 +34,34 @@ export default {
     }
 }
 
+#about {
+    position: relative;
+    padding-left: 80px;
+    letter-spacing: 3px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: $c-a;
+        transform: translateY(-50%);
+    }
+}
+
 .card-description {
     padding: 50px;
 
     h1 {
+        @include second-font;
         font-size: 50px;
         padding: 30px 0;
+    }
+
+    p {
+        letter-spacing: 1px;
     }
 }
 </style>
